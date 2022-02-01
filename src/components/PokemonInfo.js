@@ -13,7 +13,9 @@ function PokemonInfo({ url }) {
     console.log(pokeInfo)
     return (
         <div>
-           {pokeInfo.forms[0].name}
+            <h2>{pokeInfo.forms[0]?.name}</h2>
+            <img src={pokeInfo.sprites.front_default} alt={pokeInfo.forms[0]?.name} />
+           
         </div>
     )
 }
