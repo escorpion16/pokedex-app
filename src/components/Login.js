@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { setName } from "../components/redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 function Login() {
 
-    const [value, setValue] = useState("")
+    const name = useSelector( state => state.name)
+    const dispatch = useDispatch()
 
     const submit = e => {
         e.preventDefault()
-        console.log(value)
+        console.log(name)
     }
 
     return (
@@ -15,7 +18,7 @@ function Login() {
             <h4>Give me you name to start</h4>
 
             <div className='input-form'>
-                <input value={value} onChange={e => setValue(e.target.value)}/>
+                <input value={name} onChange={e => dispatch(setName(e.target.value))}/>
                 <button onClick={submit}> submit </button>
             </div>
         </div>
