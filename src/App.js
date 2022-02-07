@@ -1,6 +1,6 @@
 import './App.css';
 import { HashRouter, Routes, Route } from "react-router-dom";
-import NameForm from './components/NameForm';
+import Login from './components/Login';
 import Pokedex from './components/Pokedex';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <HashRouter>
         <Routes>
-          <Route path="/" element={<NameForm/>}/>
+          <Route path="/" element={<Login/>}/>
           <Route path="/pokedex" element={<Pokedex/>} />
         </Routes>
       </HashRouter>

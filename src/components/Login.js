@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function NameForm() {
+function Login() {
 
     const [value, setValue] = useState("")
 
@@ -22,4 +22,4 @@ function NameForm() {
     )
 }
 
-export default NameForm
+export default Login
