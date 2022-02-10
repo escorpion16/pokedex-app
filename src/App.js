@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Login/>}/>
 
           <Route element={<ProtectedRoutes/>}>
-            <Route path="/pokedex" element={<Pokedex/>} />
+            <Route className='pokemons-container' path="/pokedex" element={<Pokedex/>} />
           </Route>
         </Routes>
       </HashRouter>

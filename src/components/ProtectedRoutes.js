@@ -1,8 +1,11 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProtectedRoutes = () => {
 
-    if( true ){
+    const name = useSelector( state => state.name)
+
+    if( name ){
         return <Outlet/>
     }else{
         return <Navigate to="/" />

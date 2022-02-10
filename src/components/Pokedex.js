@@ -16,8 +16,13 @@ function Pokedex() {
     },[])
 
     return (
-        <div className='pokemon-container'>
-            <h2>{name}</h2>
+        <div>
+            <h1>Pokedex</h1>
+            <h2>Welcome {name}, here you can find your favourite pokemon!</h2>
+            
+            <div className='pokemon-container'>
+
+            
             {
                 pokemons.map(pokemon => 
                     <li key={pokemon.url} className='pokemon-card'>
@@ -25,8 +30,10 @@ function Pokedex() {
                     </li>
                 )
             }
-            
+
+            </div>
         </div>
+        
     )
 }
 
