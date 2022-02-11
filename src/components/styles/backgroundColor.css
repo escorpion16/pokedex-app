@@ -1,84 +1,68 @@
 .grass {
     background:rgb(72, 208, 176);
-    border-radius: 10px;
 }
 
 .fire {
     background: rgb(251, 108, 108);
-    border-radius: 10px;
 }
 
 .water {
     background: rgb(112, 183, 250);
-    border-radius: 10px;
 }
 
 .bug {
     background: rgb(139, 195, 74);
-    border-radius: 10px;
 }
 
 .normal {
     background: rgb(199, 0, 57);
-    border-radius: 10px;
 }
 
 .poison {
     background: rgb(91, 45, 134);
-    border-radius: 10px;
 }
 
 .electric {
     background: rgb(226, 224, 45);
-    border-radius: 10px;
 }
 
 .fairy {
     background: rgb(152, 24, 68);
-    border-radius: 10px;
 }
 
 .fighting {
     background: rgb(151, 63, 38);
-    border-radius: 10px;
 }
 
 .rock {
     background: rgb(70, 24, 11);
-    border-radius: 10px;
 }
 
 .ghost {
     background: rgb(49, 51, 106);
-    border-radius: 10px;
 }
 
 .psychic {
     background: rgb(144, 12, 63);
-    border-radius: 10px;
 }
 
 .ice {
     background: rgb(18, 173, 214);
-    border-radius: 10px;
 }
 
 .dark {
     background: rgb(38, 42, 43); 
-    border-radius: 10px;
 }
 
 .flying {
     background: rgb(60, 93, 216); 
-    border-radius: 10px;
 }
 
 .dragon {
     background: rgb(221, 33, 33); 
-    border-radius: 10px;
 }
 
 .steel {
     background: rgb(111, 107, 103); 
-    border-radius: 10px;
 }
+

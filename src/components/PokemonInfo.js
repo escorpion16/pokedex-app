@@ -18,7 +18,7 @@ function PokemonInfo({ url, name }) {
         <div className='pokemon-wrapper'>
                 {pokeInfo && 
                 <Link to={`/pokedex/${pokeInfo.id}`}>
-                    <div className={pokeInfo.types[0]?.type.name === 'grass' ? 'grass' : 
+                    <div id='border-card' className={pokeInfo.types[0]?.type.name === 'grass' ? 'grass' : 
                                     pokeInfo.types[0]?.type.name === 'fire' ? 'fire' :
                                     pokeInfo.types[0]?.type.name === 'water' ? 'water' :
                                     pokeInfo.types[0]?.type.name === 'bug' ? 'bug' :
@@ -34,7 +34,7 @@ function PokemonInfo({ url, name }) {
                                     pokeInfo.types[0]?.type.name === 'dark' ? 'dark' :
                                     pokeInfo.types[0]?.type.name === 'flying' ? 'flying' :
                                     pokeInfo.types[0]?.type.name === 'dragon' ? 'dragon' : 'steel'
-                    }>
+                }>
                         
                         <div className='pokemon-details'>
                             <h3 className='pokemon-name'><b> {name} </b></h3>
@@ -48,11 +48,10 @@ function PokemonInfo({ url, name }) {
                                         <div><b>speed: </b>{pokeInfo.stats[5]?.base_stat}</div>
                                     </div>
                                     <div className='pokemon-image'>
-                                        <img src={pokeInfo.sprites?.other.dream_world.front_default} alt={name} />
-                                        <div className='pokemon-ball'></div>  
                                     </div>
                                 </div>
-                                
+                            <img src={pokeInfo.sprites?.other.dream_world.front_default} alt={name} className="pokemon-sprite"/>
+                            <div className='pokemon-ball'></div>  
                         </div>
                         
                     </div>

@@ -7,8 +7,6 @@
 .pokemon-card {
     display: flex;
     width: 25%;
-    height: 100%;
-    border: 1px solid #000;
     margin: 1rem;
     border-radius: 10px;
 }

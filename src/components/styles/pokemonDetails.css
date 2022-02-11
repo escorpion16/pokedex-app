@@ -1,0 +1,34 @@
+#pokemonInfo-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#pokemonInfo-wrapper h2 {
+    margin: 0;
+}
+
+#pokemonInfo-wrapper div {
+    border-radius: 6px;
+}
+
+.pokemonInfo-details-container {
+    width: 100%;
+    padding: 12% 6%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.pokemonInfo-details {
+    width: 65%;
+    height: 100%;
+    background-color: antiquewhite;
+    color: #000;
+}
+
+.pokemonInfo-movements {
+    background-color: antiquewhite;
+    width: 30%;
+    height: 100%;
+}
+
