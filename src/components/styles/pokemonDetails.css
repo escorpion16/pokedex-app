@@ -8,27 +8,142 @@
 }
 
 #pokemonInfo-wrapper div {
-    border-radius: 6px;
+    border-radius: 3px;
 }
 
-.pokemonInfo-details-container {
+.pokemonInfo-container {
     width: 100%;
-    padding: 12% 6%;
+    padding: 2% 6%;
     display: flex;
     justify-content: space-around;
-    
+}
+
+/* pokemon logo */
+.pokemonInfo-logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemonInfo-logo{
+    background-image: url("../../images/PokemonLogo.png");
+    height: 9rem;
+    width: 18rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* details information about pokemon */
+.pokemonInfo-details-wrapper {
+    width: 65%;
+    height: 100%;
 }
 
 .pokemonInfo-details {
-    width: 65%;
-    height: 100%;
     background-color: antiquewhite;
     color: #000;
+    padding: 1rem 0;
 }
 
-.pokemonInfo-movements {
+.pokemonInfo-details .pokemonInfo-image img{
+    height: 15rem;
+    width: 15rem;
+}
+
+.pokemonInfo-details .pokemonInfo-weight-height {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    font-size: large;
+}
+
+.pokemonInfo-details .pokemonInfo-name {
+    padding: 1rem;
+    font-size: x-large;
+    font-weight: 700;
+    text-transform: capitalize;
+} 
+
+.pokemonInfo-types {
     background-color: antiquewhite;
-    width: 30%;
-    height: 100%;
+    margin-top: 1rem;
 }
 
+.pokemonInfo-types-abilities-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+
+.pokemonInfo-types-wrapper {
+    width: 45%;
+    background-color: antiquewhite;
+    padding: 1rem 0;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.pokemonInfo-types-wrapper .pokemonInfo-type-item, .pokemonInfo-abilities-wrapper .pokemonInfo-abilities-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.pokemonInfo-abilities-wrapper {
+    width: 45%;
+    background-color: antiquewhite;
+    padding: 1rem 0;
+}
+
+.pokeInfo-stats-wrapper {
+    background-color: antiquewhite;
+    margin-top: 1.2rem;
+}
+
+.pokeInfo-stats-wrapper .pokeInfo-title-stats {
+    padding: 1rem;
+}
+
+.pokeInfo-stats-wrapper .pokeInfo-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+/* Movements sidebar */
+
+.pokeInfo-sidebar {
+    width: 30%;
+}
+
+.pokeInfo-sidebar .pokeInfo-encounters-btn {
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    background-color: antiquewhite;
+    margin-bottom: 1.2rem;
+    border-radius: 3px;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.pokeInfo-sidebar .pokeInfo-movements {
+    background-color: antiquewhite;
+    height: 51vh;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent,#30ff00);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent,#00c6ff);
+}

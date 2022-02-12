@@ -36,27 +36,67 @@ function PokemonDetails() {
                     pokemon.types[0]?.type.name === 'flying' ? 'flying' :
                     pokemon.types[0]?.type.name === 'dragon' ? 'dragon' : 'steel'
                     }>
-                    <div className='pokemonInfo-details-container'>
-                        <div className='pokemonInfo-details'>
-                            <h2>POKEMON</h2>
-                            <div className='pokemonInfo-image'>
-                                <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
-                            </div>
-                            <div>{pokemon.name}</div>
-                            <div>Weight: {pokemon.weight}</div>
-                            <div>Height: {pokemon.height}</div>
-                            <div>#{id}</div>
+                    <div className='pokemonInfo-logo-wrapper'>
 
-                            <div className='pokemonInfo-types'>
-                                <h2>Type</h2>
-                                <div>
-                                    { pokemon.types.map(pokemonType => <div className='pokemonInfo-type'>{ pokemonType.type.name }</div>) }
+                        <div className='pokemonInfo-logo'></div>
+                    </div>
+                    <div className='pokemonInfo-container'>
+                        <div className='pokemonInfo-details-wrapper'>
+                            <div className='pokemonInfo-details'>
+                                
+                                <div className='pokemonInfo-image'>
+                                    <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
+                                </div>
+                                <div className='pokemonInfo-weight-height'>
+                                    <div><b>Weight: </b>{pokemon.weight}</div>
+                                    <div><b>Height: </b>{pokemon.height}</div>
+                                </div>
+                                <div className='pokemonInfo-name'>{pokemon.name}</div>
+                                <div className='pokeInfo-id'># {id}</div>
+                            </div>
+                            <div className='pokemonInfo-types-abilities-wrapper'>
+                                <div className='pokemonInfo-types-wrapper'>
+                                        <h2>Type</h2>
+                                        <div className='pokemonInfo-type-item'>
+                                            { pokemon.types.map(pokemonType => <div  key={pokemonType.type.name}>{ pokemonType.type.name }</div>) }
+                                        </div>
+                                </div>
+                                <div className='pokemonInfo-abilities-wrapper'>
+                                        <h2>Abilities</h2>
+                                        <div className='pokemonInfo-abilities-item'>
+                                            { pokemon.abilities.map(pokemonAbilities => <div  key={pokemonAbilities.ability.name}>{ pokemonAbilities.ability.name }</div>) }
+                                        </div>
                                 </div>
                             </div>
+                            <div className='pokeInfo-stats-wrapper'>
+                                <h2 className='pokeInfo-title-stats'>Stats Base</h2>
+                                <div className='pokeInfo-stats'>
+                                    <div>HP: </div>
+                                    <div>{pokemon.stats[0].base_stat}</div>
+                                </div>
+                                <div className='pokeInfo-stats'>
+                                    <div>Speed: </div>
+                                    <div className='progress-bar blue'><span></span>{pokemon.stats[5].base_stat}</div>
+                                </div>
+                                <div className='pokeInfo-stats'>
+                                    <div>Attack: </div>
+                                    <div>{pokemon.stats[1].base_stat}</div>
+                                </div>
+                                <div className='pokeInfo-stats'>
+                                    <div>Defense: </div>
+                                    <div>{pokemon.stats[2].base_stat}</div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div className='pokemonInfo-movements'>
-                            { pokemon.moves.map(pokemonMove => <h3 key={pokemonMove.move.name}>{ pokemonMove.move.name}</h3>)}
+                        
+                        <div className='pokeInfo-sidebar'>
+                            <button className='pokeInfo-encounters-btn'>Encounters</button>
+                            <div className='pokeInfo-movements'>
+                                { pokemon.moves.map(pokemonMove => <h3 key={pokemonMove.move.name}>{ pokemonMove.move.name}</h3>)}
+                            </div>
                         </div>
+                        
                     </div>
                 
                 </div>
