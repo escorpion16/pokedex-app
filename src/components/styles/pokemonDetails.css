@@ -22,15 +22,28 @@
 .pokemonInfo-logo-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .pokemonInfo-logo{
     background-image: url("../../images/PokemonLogo.png");
-    height: 9rem;
-    width: 18rem;
+    height: 10rem;
+    width: 20rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+}
+
+/* pokeball background */
+
+.pokeball-background {
+    width: 9rem;
+    height: 9rem;
+    background-image: url("../../images/pokemonball.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
 }
 
 /* details information about pokemon */

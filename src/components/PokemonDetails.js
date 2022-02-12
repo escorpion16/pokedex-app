@@ -37,8 +37,8 @@ function PokemonDetails() {
                     pokemon.types[0]?.type.name === 'dragon' ? 'dragon' : 'steel'
                     }>
                     <div className='pokemonInfo-logo-wrapper'>
-
                         <div className='pokemonInfo-logo'></div>
+                        <div className='pokeball-background'></div>
                     </div>
                     <div className='pokemonInfo-container'>
                         <div className='pokemonInfo-details-wrapper'>
@@ -91,7 +91,7 @@ function PokemonDetails() {
                         </div>
                         
                         <div className='pokeInfo-sidebar'>
-                            <button className='pokeInfo-encounters-btn'>Encounters</button>
+                            <button className='pokeInfo-encounters-btn'><i className="bi bi-geo-alt-fill"></i> Encounters</button>
                             <div className='pokeInfo-movements'>
                                 { pokemon.moves.map(pokemonMove => <h3 key={pokemonMove.move.name}>{ pokemonMove.move.name}</h3>)}
                             </div>
