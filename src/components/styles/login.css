@@ -1,0 +1,60 @@
+/* login container */
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+/* greeting container */
+.login-wrapper .greeting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting-container .pokemon-ash-image {
+    background-image: url("../../images/pokemon-ash-transparent-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 12rem;
+    width: 12rem;
+}
+
+/* input name */
+.login-wrapper p {
+    font-size: x-large;
+}
+
+.login-wrapper .input-form {
+    width: 100%;
+}
+
+.login-wrapper .input-form input{
+    height: 3rem;
+    width: 30%;
+    border-radius: 30px;
+    border: 0;
+    background-color: #E3E3E3;
+    outline: none;
+    padding: 0 2rem;
+    box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
+}
+
+.login-wrapper .input-form button{
+    border-radius: 50%;
+    background-color: #2BC705;
+    border: 0;
+    height: 3rem;
+    width: 3rem;
+    margin-left: .3rem;
+}
+
+.login-wrapper .input-form button .bi-send-fill {
+    color: #fff;
+    font-size: medium;
+}
+
