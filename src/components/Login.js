@@ -1,8 +1,8 @@
 import React from 'react'
-import { setName } from "../components/redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./styles/login.css";
+import { setName } from "./redux/actions";
 
 function Login() {
 

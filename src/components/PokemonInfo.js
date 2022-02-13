@@ -14,6 +14,8 @@ function PokemonInfo({ url, name }) {
             .then(res => setPokeInfo(res.data))
     },[url])
 
+    console.log(pokeInfo)
+
     return (
         <div className='pokemon-wrapper'>
                 {pokeInfo && 

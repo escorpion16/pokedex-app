@@ -1,20 +1,22 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "../components/styles/backgroundColor.css";
 import "../components/styles/pokemonDetails.css"
+import { setPokemons } from "./redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 function PokemonDetails() {
 
-    const { id } = useParams()
+    const { id } = useParams();
+    const dispatch = useDispatch()
 
-    const [pokemon, setPokemon] =  useState(null)
+    const pokemon = useSelector(state => state.pokemons) 
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-            .then(res => setPokemon(res.data))
-    }, [id])
-
+            .then(res => dispatch(setPokemons(res.data)))
+    }, [id, dispatch])
 
     return (
         <div>
