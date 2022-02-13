@@ -2,7 +2,8 @@ import { actions } from "../actions";
 
 const INITIAL_STATE = {
     name: "",
-    pokemons: null
+    pokemons: [],
+    pokemonDetails: null
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -16,6 +17,11 @@ const reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 pokemons: pokemon
+            }
+        case actions.setPokemonDetails:
+            return {
+                ...state,
+                pokemonDetails: action.payload
             }
         default:
             return state

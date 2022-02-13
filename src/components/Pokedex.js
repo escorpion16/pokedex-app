@@ -1,19 +1,21 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import "../components/styles/pokedex.css";
 import PokemonInfo from './PokemonInfo'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setPokemons } from "./redux/actions";
 
 function Pokedex() {
     const name = useSelector(state => state.name)
 
-    const [pokemons, setPokemons] = useState([])
-
+    
+    const pokemons = useSelector( state => state.pokemons)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon/')
-            .then(res => setPokemons(res.data.results))
-    },[])
+            .then(res => dispatch(setPokemons(res.data.results)))
+    },[dispatch])
 
     return (
         <div>
