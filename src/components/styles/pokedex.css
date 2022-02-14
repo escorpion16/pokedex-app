@@ -10,3 +10,20 @@
     margin: 1rem;
     border-radius: 10px;
 }
+
+/* pagination styles */
+.pagination-wrapper {
+    padding: 1.5rem;
+}
+
+.pagination-wrapper button {
+    border-radius: 50%;
+    background-color: #5B2C6F;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    margin: 0 .3rem;
+    font-size: large;
+    text-decoration: none;
+    color: antiquewhite;
+}
