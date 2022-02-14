@@ -93,7 +93,7 @@ function PokemonDetails() {
                         </div>
                         
                         <div className='pokeInfo-sidebar'>
-                            <button className='pokeInfo-encounters-btn'><i className="bi bi-geo-alt-fill"></i> Encounters</button>
+                            <h2>Movements</h2>
                             <div className='pokeInfo-movements'>
                                 { pokemonDetails.moves.map(pokemonMove => <h3 key={pokemonMove.move.name}>{ pokemonMove.move.name}</h3>)}
                             </div>

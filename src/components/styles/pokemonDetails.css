@@ -129,22 +129,16 @@
 
 .pokeInfo-sidebar {
     width: 30%;
+    height: 100%;
+    background-color: antiquewhite;
 }
 
-.pokeInfo-sidebar .pokeInfo-encounters-btn {
-    border: none;
+.pokeInfo-sidebar h2 {
     padding: 1rem;
-    width: 100%;
-    background-color: antiquewhite;
-    margin-bottom: 1.2rem;
-    border-radius: 3px;
-    font-size: medium;
-    text-decoration: none;
 }
 
 .pokeInfo-sidebar .pokeInfo-movements {
-    background-color: antiquewhite;
-    height: 51vh;
+    height: 52.1vh;
     overflow: scroll;
 }
 
