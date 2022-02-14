@@ -12,7 +12,6 @@ function Login() {
 
     const submit = e => {
         e.preventDefault()
-        console.log(name)
         navigate("/pokedex")
     }
 
