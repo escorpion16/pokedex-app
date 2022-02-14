@@ -110,8 +110,9 @@
     padding: 1rem 0;
 }
 
+/* stats bar */
 .pokeInfo-stats-wrapper {
-    background-color: antiquewhite;
+    background-color: antiquewhite;;
     margin-top: 1.2rem;
 }
 
@@ -122,7 +123,30 @@
 .pokeInfo-stats-wrapper .pokeInfo-stats {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 1rem;
+}
+
+.pokeInfo-stats .stat {
+    width: 15%;
+}
+
+.pokeInfo-stats .bar {
+    background-color: #353b48;
+    width: 50%;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.pokeInfo-stats .bar span {
+    height: 20px;
+    float:left;
+    background: linear-gradient(135deg, rgb(34, 137, 233)0%, rgb(158, 18, 223)100%);
 }
 
 /* Movements sidebar */

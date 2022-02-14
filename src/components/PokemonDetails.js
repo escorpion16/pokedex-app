@@ -73,20 +73,24 @@ function PokemonDetails() {
                             <div className='pokeInfo-stats-wrapper'>
                                 <h2 className='pokeInfo-title-stats'>Stats Base</h2>
                                 <div className='pokeInfo-stats'>
-                                    <div>HP: </div>
-                                    <div>{pokemonDetails.stats[0].base_stat}</div>
+                                    <h3 className='stat'>HP: </h3>
+                                    <span className='bar'><span className='hp-stat' style={{width: `${pokemonDetails.stats[0].base_stat}%`} }></span></span>
+                                    <h3>{pokemonDetails.stats[0].base_stat}/100</h3>
                                 </div>
                                 <div className='pokeInfo-stats'>
-                                    <div>Speed: </div>
-                                    <div className='progress-bar blue'><span></span>{pokemonDetails.stats[5].base_stat}</div>
+                                    <h3 className='stat'>Speed: </h3>
+                                    <span className='bar'><span className='speed-stat' style={{width: `${pokemonDetails.stats[5].base_stat}%`}}></span></span>
+                                    <h3>{pokemonDetails.stats[5].base_stat}/100</h3>
                                 </div>
                                 <div className='pokeInfo-stats'>
-                                    <div>Attack: </div>
-                                    <div>{pokemonDetails.stats[1].base_stat}</div>
+                                    <h3 className='stat'>Attack: </h3>
+                                    <span className='bar'><span className='attack-stat' style={{width: `${pokemonDetails.stats[1].base_stat}%`}}></span></span>
+                                    <h3>{pokemonDetails.stats[1].base_stat}/100</h3>
                                 </div>
                                 <div className='pokeInfo-stats'>
-                                    <div>Defense: </div>
-                                    <div>{pokemonDetails.stats[2].base_stat}</div>
+                                    <h3 className='stat'>Defense: </h3>
+                                    <span className='bar'><span className='defense-stat' style={{width: `${pokemonDetails.stats[2].base_stat}%`}}></span></span>
+                                    <h3>{pokemonDetails.stats[2].base_stat}/100</h3>
                                 </div>
                             </div>
                             
