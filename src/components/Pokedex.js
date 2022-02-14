@@ -10,6 +10,10 @@ function Pokedex() {
     const pokemons = useSelector( state => state.pokemons)
     const dispatch = useDispatch()
 
+
+    // select pokemon type
+    const [pokemonType, setPokemonType] = useState([])
+
     // Pagination
     const [page, setPage] = useState(1)
     const pokemonsPerPage = 9
@@ -26,7 +30,6 @@ function Pokedex() {
         pagesNumbers.push(i)
     }
 
-    console.log(pagesNumbers)
     // the end Pagination code
 
     useEffect(() => {
@@ -34,16 +37,37 @@ function Pokedex() {
             .then(res => dispatch(setPokemons(res.data.results)))
     },[dispatch])
 
+    useEffect(() => {
+        axios.get("https://pokeapi.co/api/v2/type/")
+            .then(res => setPokemonType(res.data.results))
+    },[])
+
+    const types = url => {
+        
+        console.log(url)
+        axios.get(url)
+        .then(res => dispatch(setPokemons(res.data.pokemon)))
+       
+    }
+
     return (
         <div>
             <h1>Pokedex</h1>
             <h2>Welcome {name}, here you can find your favourite pokemon!</h2>
+
+            <div className='select-type'>
+                <select onChange={e => types(e.target.value)}>
+                    {pokemonType.map(type => (
+                        <option key={type.url} value={type.url}>{type.name}</option>
+                    ))}
+                </select>
+            </div>
             
             <div className='pokemon-container'>
                 {
                     paginatedPokemons.map(pokemon => 
-                        <li key={pokemon.url} className='pokemon-card'>
-                            <PokemonInfo url={pokemon.url} name={pokemon.name} />
+                        <li key={pokemon.url ? pokemon.url : pokemon.pokemon.url} className='pokemon-card'>
+                            <PokemonInfo url={pokemon.url ? pokemon.url : pokemon.pokemon.url} name={pokemon.name} />
                         </li>
                     )
                 }

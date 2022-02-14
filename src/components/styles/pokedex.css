@@ -10,10 +10,20 @@
     margin: 1rem;
     border-radius: 10px;
 }
+/* select type pokemon */
+
+.select-type select {
+    padding: 1rem 2rem;
+    font-size: large;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
 
 /* pagination styles */
 .pagination-wrapper {
     padding: 1.5rem;
+    width: 100%;
 }
 
 .pagination-wrapper button {
@@ -26,4 +36,5 @@
     font-size: large;
     text-decoration: none;
     color: antiquewhite;
+    font-weight: 700;
 }
