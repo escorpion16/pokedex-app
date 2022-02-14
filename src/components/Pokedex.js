@@ -4,6 +4,7 @@ import "../components/styles/pokedex.css";
 import PokemonInfo from './PokemonInfo'
 import { useSelector, useDispatch } from "react-redux";
 import { setPokemons } from "./redux/actions";
+import { useNavigate } from 'react-router-dom';
 
 function Pokedex() {
     const name = useSelector(state => state.name)
@@ -13,6 +14,10 @@ function Pokedex() {
 
     // select pokemon type
     const [pokemonType, setPokemonType] = useState([])
+
+    // search input
+    const [pokemonSearched, setPokemonSearched] = useState("")
+    const navigate = useNavigate()
 
     // Pagination
     const [page, setPage] = useState(1)
@@ -43,24 +48,33 @@ function Pokedex() {
     },[])
 
     const types = url => {
-        
         console.log(url)
         axios.get(url)
         .then(res => dispatch(setPokemons(res.data.pokemon)))
-       
     }
+
+    // search function
+    const searchPokemon = () => navigate(`/pokedex/${pokemonSearched}`)
 
     return (
         <div>
             <h1>Pokedex</h1>
             <h2>Welcome {name}, here you can find your favourite pokemon!</h2>
 
+            {/* select */}
             <div className='select-type'>
                 <select onChange={e => types(e.target.value)}>
                     {pokemonType.map(type => (
                         <option key={type.url} value={type.url}>{type.name}</option>
                     ))}
                 </select>
+            </div>
+
+            {/* search input */}
+
+            <div className='search-container'>
+                <input className='search-input' type="text" value={pokemonSearched} placeholder="Insert pokemon name..." onChange={e => setPokemonSearched(e.target.value)}/>
+                <button className='search-btn' onClick={searchPokemon}> <i className="bi bi-search"></i> </button>
             </div>
             
             <div className='pokemon-container'>

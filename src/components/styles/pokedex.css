@@ -13,7 +13,7 @@
 /* select pokemon type */
 
 .select-type select {
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     font-size: large;
     border-radius: 30px;
     border: none;
@@ -37,4 +37,25 @@
     text-decoration: none;
     color: antiquewhite;
     font-weight: 700;
+}
+
+/* search input */
+.search-container {
+    padding: 1.5rem;
+}
+
+.search-container .search-input {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    font-size: large;
+    border-radius: 30px;
+    padding: .3rem 1rem;
+}
+
+.search-container .search-btn {
+    font-size: large;
+    border-radius: 50%;
+    border: none;
+    height: 1.6rem;
+    width: 1.6rem;
 }
